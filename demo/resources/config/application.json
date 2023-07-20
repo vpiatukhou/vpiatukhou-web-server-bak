@@ -1,0 +1,38 @@
+{
+    "serverPort": 8080,
+    "serverName": "Demo",
+    "ssl": {
+        "enabled": true,
+        "certificateFilepath": "/etc/webserver/ssl/demo.crt",
+        "privateKeyFilepath": "/etc/webserver/ssl/demo.key",
+        "dhFilepath": "/etc/webserver/ssl/dh4096.pem",
+        "password": "demo123"
+    },
+    "staticResourceMapping": {
+        "baseDir": "/var/www/webserver/",
+        "errorPageMapping": [
+            {
+                "status": 401,
+                "page": "pages/errors/forbidden.html"
+            },
+            {
+                "status": 404,
+                "page": "pages/errors/notFound.html"
+            },
+            {
+                "status": 405,
+                "page": "pages/errors/methodNotAllowed.html"
+            },
+            {
+                "status": 500,
+                "page": "pages/errors/internalServerError.html"
+            }
+        ]
+    },
+    "mediaTypeMapping": [
+        {
+            "fileNameRegex": ".+[.]json$",
+            "mediaType": "application/json"
+        }
+    ]
+}

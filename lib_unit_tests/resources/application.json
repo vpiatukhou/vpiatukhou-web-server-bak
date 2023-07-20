@@ -1,0 +1,34 @@
+{
+    "serverPort": 8081,
+    "serverName": "aaa",
+    "ssl": {
+        "enabled": true,
+        "certificateFilepath": "/ssl/cert.pem",
+        "privateKeyFilepath": "/ssl/certkey.key",
+        "dhFilepath": "/ssl/aaa.pem",
+        "password": "aaa123"
+    },
+    "staticResourceMapping": {
+        "baseDir": "/base/dir/",
+        "errorPageMapping": [
+            {
+                "status": 401,
+                "page": "errors/forbidden.html"
+            },
+            {
+                "status": 404,
+                "page": "/errors/notFound.html"
+            }
+        ]
+    },
+    "mediaTypeMapping": [
+        {
+            "fileNameRegex": ".+[.]json$",
+            "mediaType": "application/json"
+        },
+        {
+            "fileNameRegex": ".+[.]tiff$",
+            "mediaType": "image/tiff"
+        }
+    ]
+}

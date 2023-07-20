@@ -1,0 +1,12 @@
+.container {
+    background-color: antiquewhite;
+}
+
+.buttons {
+    margin: 10px;
+}
+
+.buttons button {
+    height: 50px;
+    width: 200px;
+}

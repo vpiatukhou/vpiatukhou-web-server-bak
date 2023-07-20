@@ -1,0 +1,15 @@
+{
+    "serverPort": 8080,
+    "ssl": {
+        "enabled": false
+    },
+    "staticResourceMapping": {
+        "baseDir": "@BINARY_DIR@/resources/web_content/base_dir/",
+        "errorPageMapping": [
+            {
+                "status": 404,
+                "page": "notFound.html"
+            }
+        ]
+    }
+}

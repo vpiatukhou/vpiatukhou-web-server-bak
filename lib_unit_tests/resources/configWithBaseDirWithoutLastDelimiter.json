@@ -1,0 +1,15 @@
+{
+    "staticResourceMapping": {
+        "baseDir": "/base/dir",
+        "errorPageMapping": [
+            {
+                "status": 401,
+                "page": "errors/forbidden.html"
+            },
+            {
+                "status": 404,
+                "page": "/errors/notFound.html"
+            }
+        ]
+    }
+}
